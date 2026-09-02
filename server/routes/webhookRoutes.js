@@ -1,7 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const { handleRazorpayWebhook } = require('../controllers/webhookController');
+const { handleWebhook } = require('../controllers/paymentController');
 
-router.post('/razorpay', handleRazorpayWebhook);
+// Point this to the correct controller that has the AI Recovery logic
+router.post('/razorpay', handleWebhook);
 
 module.exports = router;
